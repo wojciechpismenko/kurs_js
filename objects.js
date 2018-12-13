@@ -87,3 +87,21 @@ function fixData(tab) {
 console.log(users);
 console.log(fixData(users));
 
+const fixTab = fixData(users);
+console.log(fixTab);
+
+let money = 0;
+let age = 0;
+
+for (const el of fixTab) {
+    money += el.money;
+    age += el.age;
+}
+
+const summary = {
+    money : money,
+    age : age,
+    averageAge : age / fixTab.length
+}
+
+console.log(summary);
