@@ -39,3 +39,13 @@ console.log('Losowa tablica: ' + tab);
 console.log('Najmniejszy element: ' + tab.sort(compare)[0]);
 console.log('Największy eelment: ' + tab.sort(compare)[tab.length-1]);
 
+const tabUsers = [
+    {name : "Marcin", age: 14},
+    {name : "Piotr", age: 18},
+    {name : "Agnieszka", age: 13},
+    {name : "Weronika", age: 20}
+];
+
+console.log(tabUsers.filter(function(user) {
+    return user.age >= 18;
+}));
