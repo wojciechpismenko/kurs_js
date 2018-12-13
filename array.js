@@ -17,4 +17,25 @@ arr.forEach(function(el) {
 
 arr.push('koniec');
 arr.unshift('poczatek');
-console.log(arr.length);
+console.log('Nowa tablica to: ' + arr);
+console.log('Długość nowej tablicy to: ' + arr.length);
+
+let tab = [];
+
+function random(){
+    let a = Math.floor(Math.random() * 10) + 1;
+    return a;
+};
+
+for (let i=0; i<10; i+=1) {
+    tab[i] = random();
+};
+
+function compare(a, b) {
+    return a-b
+};
+
+console.log('Losowa tablica: ' + tab);
+console.log('Najmniejszy element: ' + tab.sort(compare)[0]);
+console.log('Największy eelment: ' + tab.sort(compare)[tab.length-1]);
+
