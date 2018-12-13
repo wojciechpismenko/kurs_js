@@ -33,3 +33,21 @@ const currentUser = {
 };
 
 currentUser.show();
+
+const book = {
+    title : "Diuna",
+    author : "Frank Herbert",
+    pageCount : 325,
+    publisher : 2,
+
+    showDetails : function() {
+        for (const i in this) {
+            if (typeof this[i] !== "function") {
+                console.log(i);
+                console.log(this[i]);
+            }
+        }
+    }
+}
+
+book.showDetails();
