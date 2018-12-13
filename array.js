@@ -14,3 +14,7 @@ for (let el of arr) {
 arr.forEach(function(el) {
     console.log(el + ' ' + el.length);
 });
+
+arr.push('koniec');
+arr.unshift('poczatek');
+console.log(arr.length);
