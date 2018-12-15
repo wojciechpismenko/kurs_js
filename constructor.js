@@ -61,3 +61,11 @@ e2.hit();
 e2.hit();
 e2.hit();
 
+String.prototype.sortText = function(char) {
+    const tab = this.split(char);
+    tab.sort();
+    return tab.join(char);
+
+}
+
+console.log("Marcin|Ania|Piotrek|Beata".sortText("|"));
