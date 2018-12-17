@@ -46,21 +46,21 @@
     MyObj.prototype.printBig = function() {
         console.log("Mój obiekt to: ", this);
         this.pets.forEach(function(el) {
-            console.log(el);
+            console.log(el.toUpperCase());
         });
     };
 
     MyObj.prototype.printSmall = function() {
         console.log("Mój obiekt to: ", this);
         this.pets.forEach(function(el) {
-            console.log(el);
+            console.log(el.toLowerCase());
         });
     };
 
     MyObj.prototype.bindBtn = function() {
-        document.querySelector('#button1').addEventListener("click", this.printBig);
-        document.querySelector('#button2').addEventListener("click", this.printSmall);
-        document.querySelector('#button3').addEventListener("click", this.printNormal);
+        document.querySelector('#button1').addEventListener("click", this.printBig.bind(this));
+        document.querySelector('#button2').addEventListener("click", this.printSmall.bind(this));
+        document.querySelector('#button3').addEventListener("click", this.printNormal.bind(this));
     };
 
     const ob1 = new MyObj();
