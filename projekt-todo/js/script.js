@@ -46,4 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
             textarea.value = '';
         }
     });
+
+    todoList.addEventListener('click', function(e) {
+       if (e.target.closest('.todo-element-delete') !== null) {
+           e.target.closest('.todo-element').remove();
+       }
+    });
 });
