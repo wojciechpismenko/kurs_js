@@ -1,0 +1,16 @@
+Q:
+(3b) – Frontend performance
+
+We are building a very complex Single Page App. The code base itself takes over 10 megabytes split over a thousand files and on top of that there are hundreds of images of varying sizes. Obviously, this is a problem, as we would like the app to load fast also on lower-end computers and mobile devices and on low network speeds.
+
+There are many methods to make this kind of app load fast – or that the user subjectively feels that it loads fast. Please choose a few you would like to apply here and describe them. What are the best ways to implement those methods? Or are there any good implementation already done?
+
+A:
+
+In our application I would apply some methods for minification, module bundling code and optimization in loading of assets. 
+
+First problem could be solved by Webpack and Babel. Babel will convert JavaScript code from ES6 to JavaScript for older version browsers. Very important for optimalization our application is using Webpack. This tool could minification and module bundling to single file. It bundling different scripts, SCSS files, images etc. Additionally it give us less requests to server. 
+
+Very important for application to load fast is method to loading of assets. Main idea is to load images, animations, advertisements etc. at a particular moment like the first time they are displayed. We can use it for example in: lazy-loading of our content, 'infinite scrolling' web sites, calculation of advertisements appearing. By less assets it reduces the use of browser memory and requests to server. Popular tools are React Lazy Load (plugin for React) and Intersection Observer API. They allow to determine events depending on the visibility of elements.
+
+I presented simple and popular solutions to make application to load faster. 
